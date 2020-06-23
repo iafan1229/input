@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-useState 활용하기(숫자 세기, 시계)
-=======
-useState활용하기(카운터, 시계)
->>>>>>> 51f91bb0948263099bc9d4489ce7de9345e3e2ae
+
+useState활용하기(Counter, Clock)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
