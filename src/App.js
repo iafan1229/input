@@ -1,12 +1,10 @@
 import React from 'react';
-import Hello from './Hello';
+import Count from './Count';
 
 function App() {
   return (
     <>
-      <Hello name="하영" color="purple" isTrueFalse={true} />
-      <Hello name="하영"  isTrueFalse={false} />
-
+      <Count />
       </>
   );
 }
