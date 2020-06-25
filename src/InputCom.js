@@ -1,26 +1,32 @@
 import React, {useState} from 'react';
 
 function InputComp(){
-    const [text, setText] = useState('');
-    const [inputText, setInputText] = useState('');
+    const [inputs, setInputs] = useState({
+        name:'',
+        nickname:''
+    })
 
-    const onText = (e) => {
-        setText(e.target.value)
-        setInputText(e.target.value)
+    const {name, nickname} = inputs
+    const inputChange=(e)=>{
+        const { value, name } = e.target;
+
+        setInputs({
+            ...inputs,
+            [name]:value
+        })
     }
-    const onReverse = () => {
-        setText(text.split("").reverse().join(""))
-    }
-    const onRemove = () => {
-        setText('')
-        setInputText('')
+    const onRemove =()=> {
+        setInputs({
+            name:'',
+            nickname:''
+        })
     }
 
     return(
         <>
-            <h1>입력: {text} </h1>
-            <input onChange={onText} value={inputText}/>
-            <button onClick={onReverse}>Reverse</button>
+            <h1>입력: {name} {nickname}</h1>
+            <span>이름:</span><input name="name" onChange={inputChange} value={name}/>
+            <span>닉네임:</span><input name="nickname"onChange={inputChange} value={nickname}/>
             <button onClick={onRemove}>Remove</button>
         </>
     )

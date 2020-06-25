@@ -1,5 +1,5 @@
 
-useState활용하기(Counter, Clock)
+input창 응용하기(이름,닉네임창)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
