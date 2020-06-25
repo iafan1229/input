@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import './Clock.css'
 
-function Clock() {
-    const [second, setSecond] = useState(0);
+function Clock(){ 
+    const [second,setSecond] = useState(0);
     const [minute, setMinute] = useState(0);
     const [hour, setHour] = useState(0);
 
@@ -14,7 +13,7 @@ function Clock() {
 
     return (
         <>
-            <h1 className={second>50?'red' : second>40?'hotpink': second>30?'pink':'black'}>{hour} : {minute} : {second} </h1>
+            <h1>{hour} : {minute} : {second} </h1>
         </>
     )
 }
